@@ -1,0 +1,16 @@
+<pre id="starPattern"></pre>
+
+    <script>
+      function generateStarPattern(rows) {
+        let pattern = '';
+        for (let i = 1; i <= rows; i++) {
+          pattern += '* '.repeat(i) + '\\n';
+        }
+        return pattern;
+      }
+
+      const numberOfRows = 5; // You can change this value to generate a different pattern
+      document.getElementById('starPattern').innerText = generateStarPattern(numberOfRows);
+    </script>
+  </body>
+</html>

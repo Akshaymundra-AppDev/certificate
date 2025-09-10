@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Powered Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: #6200ea;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #3700b3;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    .feature {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the AI-Powered Website</h1>
+    <p>Explore AI Chatbot, AI Images, AI Content, and More!</p>
+  </header>
+  <nav>
+    <a href="#chatbot">AI Chatbot</a>
+    <a href="#images">AI Images</a>
+    <a href="#content">AI Content</a>
+    <a href="#support">Support</a>
+  </nav>
+  <div class="container">
+    <!-- AI Chatbot Section -->
+    <div id="chatbot" class="feature">
+      <h2>AI Chatbot</h2>
+      <p>Interact with our AI-powered chatbot for instant assistance.</p>
+      <input type="text" id="chat-input" placeholder="Ask me anything..." />
+      <button onclick="sendMessage()">Send</button>
+      <div id="chat-response"></div>
+    </div>
+
+    <!-- AI Images Section -->
+    <div id="images" class="feature">
+      <h2>AI-Generated Images</h2>
+      <p>Generate unique images using AI.</p>
+      <button onclick="generateImage()">Generate Image</button>
+      <div id="image-output"></div>
+    </div>
+
+    <!-- AI Content Section -->
+    <div id="content" class="feature">
+      <h2>AI-Generated Content</h2>
+      <p>Create engaging content with AI.</p>
+      <textarea id="content-input" placeholder="Enter a topic..."></textarea>
+      <button onclick="generateContent()">Generate Content</button>
+      <div id="content-output"></div>
+    </div>
+
+    <!-- Support Section -->
+    <div id="support" class="feature">
+      <h2>Community Support</h2>
+      <p>Join our community for help and discussions.</p>
+      <a href="https://example.com/community" target="_blank">Visit Support Forum</a>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 AI-Powered Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Example JavaScript for AI features (mock implementation)
+    function sendMessage() {
+      const input = document.getElementById('chat-input').value;
+      const response = `AI: You said "${input}". This is a mock response.`;
+      document.getElementById('chat-response').innerText = response;
+    }
+
+    function generateImage() {
+      const imageOutput = document.getElementById('image-output');
+      imageOutput.innerHTML = '<img src="https://via.placeholder.com/300" alt="AI Generated Image">';
+    }
+
+    function generateContent() {
+      const input = document.getElementById('content-input').value;
+      const contentOutput = document.getElementById('content-output');
+      contentOutput.innerHTML = `<p>AI-Generated Content about "${input}": This is a mock response for demonstration purposes.</p>`;
+    }
+  </script>
+</body>
+</html>
